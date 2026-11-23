@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio web de desenvolvedor Frontend - Processo seletivo Canes Solution">
+  <title>Portfólio | João V.A.Teixeira</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="80" tabindex="0">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-brand">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">&lt;João V.A.Teixeira/&gt;</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Apresentação</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Áreas do Conhecimento</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#humanas">Ciências Humanas</a></li>
+              <li><a class="dropdown-item" href="#natureza">Ciências da Natureza</a></li>
+              <li><a class="dropdown-item" href="#matematica">Matemática</a></li>
+              <li><a class="dropdown-item" href="#linguagens">Linguagens</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tendências</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#ciberseguranca">Cibersegurança</a></li>
+              <li><a class="dropdown-item" href="#blockchain">Blockchain</a></li>
+              <li><a class="dropdown-item" href="#robotica">Automação/Robótica</a></li>
+              <li><a class="dropdown-item" href="#edge">Edge Computing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio" class="section hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-4 text-center">
+            <img src="https://static.wikia.nocookie.net/jerma-lore/images/4/4f/David.jpg/revision/latest?cb=20200522144256" alt="Foto de perfil" class="avatar img-fluid rounded-circle shadow">
+          </div>
+          <div class="col-12 col-md-8">
+            <p class="text-uppercase small tracking mb-1 text-accent">Olá, eu sou</p>
+            <h1 class="display-5 fw-bold">João Vitor Araujo Teixeira</h1>
+            <h2 class="h5 text-muted mb-3">Programador em formação - Estudate do Senac Nações Unidas</h2>
+            <p>
+              Estudante do Ensino Médio técnico de Desenvolvimento de Sistemas, apaixonado por criar interfaces
+              acessíveis, responsivas e bem organizadas. Busco minha primeira oportunidade como desenvolvedor
+              Frontend para aprender com um time de engenharia e entregar valor desde o início.
+            </p>
+
+            <div class="row g-3 mt-2">
+              <div class="col-12 col-lg-6">
+                <h3 class="h6 fw-bold">Hard Skills</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-bg-primary">HTML5</span>
+                  <span class="badge text-bg-primary">CSS3</span>
+                  <span class="badge text-bg-primary">JavaScript</span>
+                  <span class="badge text-bg-primary">Bootstrap</span>
+                  <span class="badge text-bg-primary">Git &amp; GitHub</span>
+                  <span class="badge text-bg-primary">Responsividade</span>
+                  <span class="badge text-bg-primary">LocalStorage / JSON</span>
+                  <span class="badge text-bg-primary">Consumo de APIs</span>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <h3 class="h6 fw-bold">Soft Skills</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-bg-success">Comunicação</span>
+                  <span class="badge text-bg-success">Trabalho em equipe</span>
+                  <span class="badge text-bg-success">Resolução de problemas</span>
+                  <span class="badge text-bg-success">Organização</span>
+                  <span class="badge text-bg-success">Adaptabilidade</span>
+                  <span class="badge text-bg-success">Vontade de aprender</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <a href="#projetos" class="btn btn-accent">Ver projetos</a>
+              <a href="#contato" class="btn btn-outline-brand">Fale comigo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="areas-titulo-wrapper">
+      <div class="container">
+        <h2 class="section-title">Áreas do Conhecimento</h2>
+        <p class="lead">Como o Ensino Médio moldou meu raciocínio lógico e minha forma de programar.</p>
+      </div>
+    </section>
+
+    <section id="humanas" class="section">
+      <div class="container">
+        <span class="tag">Ciências Humanas</span>
+        <h3 class="h2 mt-2">História, Geografia, Filosofia e Sociologia</h3>
+        <p>A Filosofia me ensinou a questionar premissas e a argumentar com lógica, o que se parece muito com
+          depurar um código: eu parto de uma hipótese, testo e valido. A Sociologia e a Geografia me deram uma visão
+          de que software é feito para pessoas reais, em contextos diferentes, o que reforça a importância da
+          acessibilidade e da inclusão digital. A História me mostrou como as tecnologias evoluem em ciclos e como
+          decisões do passado (como padrões e protocolos) impactam sistemas até hoje.</p>
+        <p class="mb-0"><strong>Na programação:</strong> pensamento crítico, empatia com o usuário e contextualização do problema antes de codar.</p>
+      </div>
+    </section>
+
+    <section id="natureza" class="section alt">
+      <div class="container">
+        <span class="tag">Ciências da Natureza</span>
+        <h3 class="h2 mt-2">Física, Química e Biologia</h3>
+        <p>O método científico (observar, formular hipótese, experimentar e concluir) é o mesmo ciclo que uso ao
+          desenvolver: reproduzo o bug, levanto a causa provável, altero uma variável por vez e confirmo o resultado.
+          A Física me apresentou conceitos como energia, sinais e circuitos, base da eletrônica e da robótica. A Biologia
+          trouxe a ideia de sistemas que se adaptam, inspirando algoritmos e redes neurais, e a Química reforçou a
+          atenção a detalhes e à precisão de cada etapa de um processo.</p>
+        <p class="mb-0"><strong>Na programação:</strong> método experimental para depurar, pensamento sistêmico e rigor nos detalhes.</p>
+      </div>
+    </section>
+
+    <section id="matematica" class="section">
+      <div class="container">
+        <span class="tag">Matemática</span>
+        <h3 class="h2 mt-2">Álgebra, Geometria, Estatística e Lógica</h3>
+        <p>A Matemática é a base direta da lógica de programação. Variáveis e funções da Álgebra aparecem em todo
+          código; condicionais e operadores lógicos vêm da lógica proposicional; a Geometria ajuda em layouts, medidas,
+          proporções e animações no CSS; e a Estatística me ajuda a interpretar dados e métricas. Resolver problemas
+          dividindo-os em partes menores (decomposição) é um hábito que trago das aulas de exatas.</p>
+        <p class="mb-0"><strong>Na programação:</strong> algoritmos, estruturas de repetição e decisão, cálculo de layouts e análise de dados.</p>
+      </div>
+    </section>
+
+    <section id="linguagens" class="section alt">
+      <div class="container">
+        <span class="tag">Linguagens</span>
+        <h3 class="h2 mt-2">Português, Inglês, Artes e Literatura</h3>
+        <p>Escrever bem é essencial para nomear variáveis, comentar código, documentar projetos (README) e me comunicar
+          com o time. O Inglês é a língua da documentação técnica, de erros de console e de comunidades como o Stack
+          Overflow. Artes e Literatura desenvolveram minha sensibilidade para composição visual, hierarquia, cores e
+          narrativa, o que melhora o design de interfaces e a experiência do usuário.</p>
+        <p class="mb-0"><strong>Na programação:</strong> código legível, documentação clara, leitura de docs em inglês e senso estético.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Tendências Tecnológicas</h2>
+        <p class="lead mb-0">Resumos técnicos sobre quatro áreas que estão transformando o mercado de TI.</p>
+      </div>
+    </section>
+
+    <section id="ciberseguranca" class="section alt">
+      <div class="container">
+        <span class="tag">Tendência 01</span>
+        <h3 class="h2 mt-2">Cibersegurança</h3>
+        <p>Conjunto de práticas, ferramentas e processos para proteger sistemas, redes e dados contra acessos não
+          autorizados, vazamentos e ataques. Seus pilares são a tríade <strong>CIA</strong>: Confidencialidade,
+          Integridade e Disponibilidade. Entre as ameaças mais comuns estão phishing, ransomware, injeção de SQL e
+          XSS (Cross-Site Scripting).</p>
+        <ul>
+          <li><strong>Conceitos-chave:</strong> criptografia, autenticação multifator (MFA), Zero Trust, firewall, WAF e gestão de vulnerabilidades (OWASP Top 10).</li>
+          <li><strong>No Frontend:</strong> escapar conteúdo exibido (evitar XSS), usar HTTPS, nunca guardar segredos no JavaScript do cliente e validar entradas.</li>
+          <li><strong>Mercado:</strong> alta demanda por profissionais, impulsionada por leis como a LGPD.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blockchain" class="section">
+      <div class="container">
+        <span class="tag">Tendência 02</span>
+        <h3 class="h2 mt-2">Blockchain</h3>
+        <p>Livro-razão distribuído, no qual registros (blocos) são encadeados por <em>hashes</em> criptográficos,
+          tornando praticamente impossível alterar o histórico sem que a rede perceba. A confiança vem do consenso
+          entre os nós (como Proof of Work e Proof of Stake) e não de um intermediário central.</p>
+        <ul>
+          <li><strong>Conceitos-chave:</strong> hash, descentralização, consenso, carteiras e chaves, <em>smart contracts</em> (contratos que executam automaticamente).</li>
+          <li><strong>Aplicações:</strong> criptomoedas, rastreabilidade de cadeias logísticas, certificados digitais, DeFi e NFTs.</li>
+          <li><strong>No Frontend:</strong> aplicações descentralizadas (dApps) conectam a interface a carteiras como a MetaMask por bibliotecas JavaScript (ex.: ethers.js).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="robotica" class="section alt">
+      <div class="container">
+        <span class="tag">Tendência 03</span>
+        <h3 class="h2 mt-2">Automação e Robótica</h3>
+        <p>Uso de máquinas, sensores e software para executar tarefas com pouca ou nenhuma intervenção humana. Na
+          indústria 4.0, robôs colaborativos (cobots) e linhas inteligentes se integram à IoT e à IA. No software, a
+          automação aparece como RPA, pipelines de CI/CD e fluxos como n8n, Make e Zapier.</p>
+        <ul>
+          <li><strong>Conceitos-chave:</strong> sensores e atuadores, controladores (Arduino, Raspberry Pi), IoT, RPA, visão computacional.</li>
+          <li><strong>Benefícios:</strong> produtividade, padronização, menos erros e segurança em tarefas perigosas.</li>
+          <li><strong>Neste portfólio:</strong> o formulário de contato usa automação para enviar o e-mail sem que eu precise de um servidor próprio.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="edge" class="section">
+      <div class="container">
+        <span class="tag">Tendência 04</span>
+        <h3 class="h2 mt-2">Edge Computing</h3>
+        <p>Modelo em que o processamento acontece <strong>perto de onde o dado é gerado</strong> (dispositivos,
+          gateways, servidores regionais) em vez de depender apenas de um data center distante na nuvem. Isso
+          reduz a latência, economiza banda e permite funcionar mesmo com conexão instável.</p>
+        <ul>
+          <li><strong>Conceitos-chave:</strong> latência, CDN, edge functions (Cloudflare Workers, Vercel Edge), IoT e 5G.</li>
+          <li><strong>Casos de uso:</strong> carros autônomos, cidades inteligentes, jogos online e câmeras com IA embarcada.</li>
+          <li><strong>No Frontend:</strong> o próprio LocalStorage e o processamento no navegador (client-side) seguem a ideia de levar a computação para a ponta.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Galeria de Projetos</h2>
+        <p class="lead">Projetos de TI desenvolvidos durante o curso.</p>
+        <div id="galeria" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="lead">Envie uma mensagem. Ela é salva no seu navegador e também enviada por e-mail para mim.</p>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <form id="formContato" class="card card-body shadow-sm">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" name="nome" minlength="3" required>
+                  <div class="invalid-feedback">Informe seu nome (mín. 3 letras).</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback">Informe um e-mail válido.</div>
+                </div>
+                <div class="col-12">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <input type="text" class="form-control" id="assunto" name="assunto" required>
+                  <div class="invalid-feedback">Informe o assunto.</div>
+                </div>
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="mensagem" name="mensagem" rows="5" minlength="10" required></textarea>
+                  <div class="invalid-feedback">Escreva sua mensagem (mín. 10 caracteres).</div>
+                </div>
+                <div class="col-12 d-grid d-md-block">
+                  <button type="submit" class="btn btn-accent btn-lg" id="btnEnviar">Enviar mensagem</button>
+                </div>
+              </div>
+              <div id="retornoForm" class="mt-3" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand text-white-50 py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span id="gatilhoAdmin" class="user-select-none">© 2026 Seu Nome. Projeto para a Canes Solution.</span>
+      <span>HTML5 · CSS3 · JavaScript · Bootstrap</span>
+    </div>
+  </footer>
+
+  <section id="painelAdmin" class="admin-overlay d-none">
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 text-white">
+        <h2 class="h4 mb-0">Painel Administrativo · Mensagens (CRUD)</h2>
+        <button class="btn btn-sm btn-light" onclick="fecharPainel()">Fechar painel</button>
+      </div>
+
+      <div id="areaLogin" class="card card-body mx-auto" style="max-width: 360px;">
+        <form id="formLogin">
+          <label for="senhaAdmin" class="form-label">Senha</label>
+          <input type="password" id="senhaAdmin" class="form-control" required>
+          <div id="erroLogin" class="text-danger small mt-2 d-none">Senha incorreta.</div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Entrar</button>
+        </form>
+      </div>
+
+      <div id="areaAdmin" class="d-none">
+        <div class="card card-body mb-3">
+          <div class="row g-2">
+            <div class="col-12 col-md-5">
+              <input type="search" id="buscaAdmin" class="form-control" placeholder="Buscar por nome, e-mail ou assunto..." oninput="mostrarTabela()">
+            </div>
+            <div class="col-12 col-md-7 d-flex flex-wrap gap-2 justify-content-md-end">
+              <button class="btn btn-success" onclick="novaMensagem()">+ Nova mensagem</button>
+              <button class="btn btn-outline-secondary" onclick="restaurarExemplos()">Restaurar 20 exemplos</button>
+              <button class="btn btn-outline-danger" onclick="apagarTudo()">Apagar tudo</button>
+            </div>
+          </div>
+          <small class="text-muted mt-2" id="contadorAdmin"></small>
+        </div>
+
+        <div id="cardForm" class="card card-body mb-3 d-none">
+          <h3 class="h5" id="tituloForm">Mensagem</h3>
+          <form id="formMensagem">
+            <input type="hidden" id="msgId">
+            <div class="row g-2">
+              <div class="col-12 col-md-4"><input class="form-control" id="msgNome" placeholder="Nome" required></div>
+              <div class="col-12 col-md-4"><input type="email" class="form-control" id="msgEmail" placeholder="E-mail" required></div>
+              <div class="col-12 col-md-4"><input class="form-control" id="msgAssunto" placeholder="Assunto" required></div>
+              <div class="col-12"><textarea class="form-control" id="msgTexto" rows="3" placeholder="Mensagem" required></textarea></div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" onclick="cancelarForm()">Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table table-striped align-middle mb-0">
+              <thead class="table-dark">
+                <tr><th>#</th><th>Data</th><th>Nome</th><th>E-mail</th><th>Assunto</th><th>Mensagem</th><th>E-mail enviado?</th><th>Ações</th></tr>
+              </thead>
+              <tbody id="tabelaMensagens"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
