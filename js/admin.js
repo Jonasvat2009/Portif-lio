@@ -1,21 +1,13 @@
-/* ============================================================
-   admin.js - painel administrativo oculto (CRUD)
-   Três formas de abrir:
-     1) acessar  index.html#admin
-     2) clicar 5 vezes no texto do rodapé
-     3) apertar Ctrl + Shift + A
-   ============================================================ */
-
 var painel = document.getElementById("painelAdmin");
 var areaLogin = document.getElementById("areaLogin");
 var areaAdmin = document.getElementById("areaAdmin");
 var tabela = document.getElementById("tabelaMensagens");
-var logado = false;   // volta a false quando recarrega a página
+var logado = false;
 
-/* ---------- Abrir e fechar o painel ---------- */
+
 function abrirPainel() {
   painel.classList.remove("d-none");
-  document.body.style.overflow = "hidden";   // trava a rolagem da página de trás
+  document.body.style.overflow = "hidden";
 
   if (logado) {
     areaLogin.classList.add("d-none");
@@ -32,7 +24,6 @@ function fecharPainel() {
   document.body.style.overflow = "";
 }
 
-/* ---------- Login ---------- */
 document.getElementById("formLogin").addEventListener("submit", function (e) {
   e.preventDefault();
   var senha = document.getElementById("senhaAdmin").value;
@@ -47,20 +38,18 @@ document.getElementById("formLogin").addEventListener("submit", function (e) {
   }
 });
 
-/* ---------- READ: desenha a tabela ---------- */
 function mostrarTabela() {
   var busca = document.getElementById("buscaAdmin").value.toLowerCase();
   var lista = listarMensagens();
   var html = "";
   var total = 0;
 
-  // percorre de trás para frente: as mensagens mais novas aparecem primeiro
   for (var i = lista.length - 1; i >= 0; i--) {
     var m = lista[i];
     var texto = (m.nome + " " + m.email + " " + m.assunto).toLowerCase();
 
     if (texto.indexOf(busca) === -1) {
-      continue;   // não bate com a busca, pula
+      continue;
     }
     total++;
 
@@ -87,15 +76,13 @@ function mostrarTabela() {
   document.getElementById("contadorAdmin").textContent = total + " de " + lista.length + " mensagens";
 }
 
-/* ---------- CREATE: botão "+ Nova mensagem" ---------- */
 function novaMensagem() {
   document.getElementById("tituloForm").textContent = "Nova mensagem";
-  document.getElementById("msgId").value = "";   // id vazio = é uma mensagem nova
+  document.getElementById("msgId").value = "";
   document.getElementById("formMensagem").reset();
   document.getElementById("cardForm").classList.remove("d-none");
 }
 
-/* ---------- UPDATE: botão "Editar" ---------- */
 function editarMensagem(id) {
   var m = buscarMensagem(id);
   document.getElementById("tituloForm").textContent = "Editar mensagem #" + id;
@@ -111,7 +98,6 @@ function cancelarForm() {
   document.getElementById("cardForm").classList.add("d-none");
 }
 
-/* Botão "Salvar" do formulário: decide entre criar e atualizar */
 document.getElementById("formMensagem").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -122,17 +108,16 @@ document.getElementById("formMensagem").addEventListener("submit", function (e) 
   var texto = document.getElementById("msgTexto").value;
 
   if (id === "") {
-    criarMensagem(nome, email, assunto, texto, false);               // CREATE
+    criarMensagem(nome, email, assunto, texto, false);
   } else {
     var antiga = buscarMensagem(Number(id));
-    atualizarMensagem(Number(id), nome, email, assunto, texto, antiga.enviado);   // UPDATE
+    atualizarMensagem(Number(id), nome, email, assunto, texto, antiga.enviado);
   }
 
   cancelarForm();
   mostrarTabela();
 });
 
-/* ---------- DELETE ---------- */
 function excluirMensagem(id) {
   if (confirm("Excluir a mensagem #" + id + "?")) {
     deletarMensagem(id);
@@ -154,9 +139,6 @@ function apagarTudo() {
   }
 }
 
-/* ---------- Formas ocultas de abrir o painel ---------- */
-
-// 1) endereço terminando em #admin
 if (location.hash === "#admin") {
   abrirPainel();
 }
@@ -166,7 +148,6 @@ window.addEventListener("hashchange", function () {
   }
 });
 
-// 2) 5 cliques no rodapé
 var cliques = 0;
 document.getElementById("gatilhoAdmin").addEventListener("click", function () {
   cliques++;
@@ -174,10 +155,9 @@ document.getElementById("gatilhoAdmin").addEventListener("click", function () {
     cliques = 0;
     abrirPainel();
   }
-  setTimeout(function () { cliques = 0; }, 3000);   // zera a contagem depois de 3 segundos
+  setTimeout(function () { cliques = 0; }, 3000);
 });
 
-// 3) Ctrl + Shift + A
 document.addEventListener("keydown", function (e) {
   if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
     e.preventDefault();
